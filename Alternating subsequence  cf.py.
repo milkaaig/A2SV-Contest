@@ -1,0 +1,29 @@
+tc = int(input())
+for i in range(tc):
+    size = int(input())
+    a = list(map(int,input().split()))
+
+    i = 0
+
+    output = 0
+    while i < size:
+        big = a[i]
+        if a[i] > 0:
+            while i < size :
+                if a[i] > 0:
+                    big = max(big , a[i])
+                    i += 1
+                else:
+                    break
+            output += big
+            
+        else:
+            while i < size:
+                if a[i] < 0:
+                    big = max (big , a[i])
+                    i += 1
+                else:
+                    break
+            output += big
+        
+    print (output)
