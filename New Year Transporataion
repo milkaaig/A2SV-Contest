@@ -1,0 +1,18 @@
+n , target = map(int, input().split())
+cells = list(map(int, input().split()))
+checker = 0
+output = "NO"
+
+while checker < n -1 :
+    if checker + 1== target:
+        output = "YES"
+        break
+    
+    checker += cells[checker]
+
+if checker + 1 == target  :
+    output = "YES"
+
+print(output)
+
+
